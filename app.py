@@ -27,5 +27,5 @@ if b==True:
         ts=mymodule
         d=ts.main(path)
         end= time.time()
-        st.write(f"PDF processing completed.\n In {end-start} seconds")
-        print(d)
+        st.write(f"PDF processing completed.\n In {round(end-start)} seconds")
+        

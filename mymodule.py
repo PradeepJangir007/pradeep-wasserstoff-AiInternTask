@@ -106,19 +106,16 @@ def process_pdfs_in_parallel(pdf_metadata_list):
         executor.map(process_pdf, pdf_metadata_list)
 
 def main(folder_path):
-    start=time.time()
+    
     # Step 1: Ingest PDFs and store metadata in MongoDB
     pdf_metadata_list = ingest_pdfs(folder_path)
 
     # Step 2: Process each PDF (summarization and keyword extraction)
     process_pdfs_in_parallel(pdf_metadata_list)
-    end=time.time()
+   
 
-    # Fetch all documents from the collection
-    documents = collection.find()
-    # Convert documents to a list of dictionaries
-    documents_list = list(documents)
-    return(documents_list)
+
+    
                                 
 
 
