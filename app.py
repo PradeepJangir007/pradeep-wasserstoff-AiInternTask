@@ -31,5 +31,5 @@ if b==True:
             end= time.time()
             st.write(f"PDF processing completed.\n In {round(end-start)} seconds")
         except Exception as e:
-            logging.error(f"Error : {str(e)}")
+             st.write(f"Error : {str(e)}")
         
